@@ -8,6 +8,7 @@ async function main() {
       name: 'John Doe',
       email: 'johndoe@gmail.com',
       avatarUrl: 'https://github.com/CassianoJunior.png',
+      googleId: 'exampleid',
     },
   });
 
