@@ -12,11 +12,11 @@ export const pollRoutes = async (fastify: FastifyInstance) => {
   });
 
   fastify.post('/polls', async (request, reply) => {
-    const createPoolBody = z.object({
+    const createPollBody = z.object({
       title: z.string(),
     });
 
-    const { title } = createPoolBody.parse(request.body);
+    const { title } = createPollBody.parse(request.body);
     const generate = new ShortUniqueId({ length: 6 });
     const code = String(generate()).toUpperCase();
 
